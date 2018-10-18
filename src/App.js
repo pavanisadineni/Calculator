@@ -8,13 +8,13 @@ import Timer from './Timer';
 import {Breadcrumb,BreadcrumbItem} from 'reactstrap';
 
 
-class Nav extends Component{
+class NavigationBar extends Component{
   render(){
     return(
       <div>
-        <Breadcrumb>
-        <BreadcrumbItem><NavLink to='/'>Home</NavLink></BreadcrumbItem>
-        <BreadcrumbItem><NavLink to='/Calculator'>Calculator</NavLink></BreadcrumbItem>
+        <Breadcrumb className="Bread" >
+        <BreadcrumbItem ><NavLink to='/'>Home</NavLink></BreadcrumbItem>
+        <BreadcrumbItem ><NavLink to='/Calculator'>Calculator</NavLink></BreadcrumbItem>
         <BreadcrumbItem><NavLink to='Timer'>Timer</NavLink></BreadcrumbItem>
         </Breadcrumb>
       </div>
@@ -25,19 +25,19 @@ class Nav extends Component{
 class App extends Component{
   render(){
     return(
-      <router>
+      <Router>
         <div>
-          <Nav/>
+          <NavigationBar/>
           <Switch>
-          <Router exact path='/' component={Home}/>
-          <Router path='/Calculator' component={Calculator}/>
-          <Router path='/Timer' component={Timer}/>
+          <Route exact path='/' component={Home}/>
+          <Route path='/Calculator' component={Calculator}/>
+          <Route path='/Timer' component={Timer}/>
           </Switch>
           
 
 
         </div>
-      </router>
+      </Router>
     )
   }
 }

@@ -5,7 +5,7 @@ import './Home.css';
 const Home=(props)=>{
     return(
         <div>
-            <h1>Home</h1>
+            <h1>Choose between Calculator or Timer</h1>
         </div>
     )
 }
